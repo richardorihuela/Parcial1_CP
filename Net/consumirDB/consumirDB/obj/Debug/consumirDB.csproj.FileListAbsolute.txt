@@ -1,0 +1,10 @@
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\bin\Debug\consumirDB.exe.config
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\bin\Debug\consumirDB.exe
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\bin\Debug\consumirDB.pdb
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\obj\Debug\consumirDB.csprojAssemblyReference.cache
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\obj\Debug\consumirDB.Form1.resources
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\obj\Debug\consumirDB.Properties.Resources.resources
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\obj\Debug\consumirDB.csproj.GenerateResource.cache
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\obj\Debug\consumirDB.csproj.CoreCompileInputs.cache
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\obj\Debug\consumirDB.exe
+C:\Users\Pi\Documents\Parcial_1\Net\consumirDB\consumirDB\obj\Debug\consumirDB.pdb
