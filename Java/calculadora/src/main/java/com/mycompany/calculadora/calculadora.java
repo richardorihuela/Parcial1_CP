@@ -123,6 +123,11 @@ public class calculadora extends javax.swing.JFrame {
         });
 
         evaluar.setText("=");
+        evaluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                evaluarActionPerformed(evt);
+            }
+        });
 
         restar.setText("-");
         restar.addActionListener(new java.awt.event.ActionListener() {
@@ -189,8 +194,34 @@ public class calculadora extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pantalla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(cuatro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cinco)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(seis, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(abreParentesis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(uno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cierraParentesis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(dos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(exponente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(4, 4, 4)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(restar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(producto, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                            .addComponent(dividir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(cero)
@@ -204,36 +235,8 @@ public class calculadora extends javax.swing.JFrame {
                                         .addComponent(nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(4, 4, 4)
                                 .addComponent(sumar))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(cuatro)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cinco)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(seis, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(abreParentesis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(uno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(cierraParentesis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(dos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(tres, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(exponente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                .addGap(4, 4, 4)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(restar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(producto, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                                    .addComponent(dividir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -491,6 +494,147 @@ public class calculadora extends javax.swing.JFrame {
             pantalla.setText(cadena);
         }
     }//GEN-LAST:event_ceroActionPerformed
+    private String convertir(String infija){
+        String posfija="";
+        //Pila de Strings
+        Pila pila=new Pila(100);
+        //Separamos la expresion que queremos evaluar
+        String expresion[] = infija.split(" ");
+        for(int i=0;i<expresion.length; i++){
+            //entra si es operador
+            if(expresion[i].compareTo("(") == 0||expresion[i].compareTo(")") == 0||expresion[i].compareTo("+") == 0||expresion[i].compareTo("-") == 0||expresion[i].compareTo("*") == 0||expresion[i].compareTo("/") == 0||expresion[i].compareTo("^") == 0){
+                //al encontrar un ) vaciamos la pila hasta encontrar un (
+                if(pila.estaVacia()){
+                    pila.apilar(expresion[i]);
+                }else{
+                    int pe = prioridadExpresion(expresion[i]);
+                    //el operador ) no se apila
+                    String operador;
+                    if(expresion[i].compareTo(")")==0){
+                        //sacamos el ultimo operador para añadir a posfija
+                        while(pila.elementotope().compareTo("(")!=0){
+                            operador=pila.desapilar();
+                            posfija = posfija + operador + " ";
+                        }
+                        pila.desapilar();
+                    }
+                    else{
+                        while(!pila.estaVacia()&&pe<=prioridadPila(pila.elementotope())){
+                            operador = pila.desapilar();
+                            posfija = posfija + operador + " ";
+                        }
+                        pila.apilar(expresion[i]);
+                    }
+                }
+            //se añade si es un numero
+            }else{
+                posfija = posfija + expresion[i] + " ";
+            }
+        }
+        //vaciamos si quedo algun operador en la pila
+        while(!pila.estaVacia()){
+             posfija = posfija + pila.desapilar() + " ";
+        }
+        return posfija;
+    }
+    
+     private static int prioridadExpresion(String operador){
+        switch(operador){
+            case "^":
+                return 4;
+            case "/":
+                return 2;
+            case "*":
+                return 2;
+            case "+":
+                return 1;
+            case "-":
+                return 1;
+            case "(":
+                return 5;
+            case ")":
+                return -1;
+            default:
+                return 0;
+        }
+    }
+    private static int prioridadPila(String operador){
+        switch(operador){
+            case "^":
+                return 3;
+            case "/":
+                return 2;
+            case "*":
+                return 2;
+            case "+":
+                return 1;
+            case "-":
+                return 1;
+            case "(":
+                return 0;
+            case ")":
+                return -1;
+            default:
+                return 0;
+        }
+    }
+    private int evaluarPosfija(String posfija){
+        int numeros[]=new int[50];
+        int tope=0, i;
+        double ope1, ope2, ope3;
+        String expresion[] = posfija.split(" ");
+        String recorre;//recorrera nuestra cadena posfija
+        for(i=0; i<expresion.length; i++){//recorrera nuestra cadena posfija
+            //si el elemento es un operador se evalua 2 numeros
+            if(expresion[i].compareTo("+") == 0||expresion[i].compareTo("-") == 0||expresion[i].compareTo("*") == 0||expresion[i].compareTo("/") == 0||expresion[i].compareTo("^") == 0){
+                //sacamos los dos ultimos numeros de la pila
+                tope--;
+                ope2=numeros[tope];
+                tope--;
+                ope1=numeros[tope];
+                switch (expresion[i]){
+                   case "*":
+                       ope3=ope1 * ope2;
+                   break;
+                   case "/":
+                       ope3=ope1 / ope2;
+                   break;
+                   case "+":
+                       ope3=ope1 + ope2;
+                   break;
+                   case "-":
+                       ope3=ope1 - ope2;
+                   break;
+                   case "^":
+                       ope3=Math.pow(ope1, ope2);
+                   break;
+                   default:
+                       ope3 = 0;
+                   break;
+               }
+               //ope3 se añade nuevamente a la pila como entero
+               numeros[tope]=(int)ope3;
+               tope++;
+            }
+            //si es un numero se almacena en la pila numeros
+            else{
+                numeros[tope] = Integer.parseInt(expresion[i]);
+                tope++;
+            }
+        }              
+       return numeros[0];
+    }
+    
+    private int evaluar(String infija){
+        String posfija=convertir(infija);
+        System.out.println("La expresion Posfija es: "+posfija);
+        return evaluarPosfija(posfija);
+        //return posfija;
+    }
+    private void evaluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_evaluarActionPerformed
+        String cadena = pantalla.getText();
+        pantalla.setText(String.valueOf(evaluar(cadena)));
+    }//GEN-LAST:event_evaluarActionPerformed
 
     /**
      * @param args the command line arguments
